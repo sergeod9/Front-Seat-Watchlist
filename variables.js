@@ -1,0 +1,9 @@
+const apiKey = "5d509c1c741ecc0dcad78371617db718"
+const windowBreakpoint = 800;
+const baseUrl = "https://api.themoviedb.org/3"
+const searchEndPoint = "/search/movie"
+const posterBaseUrl300 = "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"
+const posterBaseUrl600 = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
+const charactersMaxCount = window.innerWidth < windowBreakpoint ? 150 : 255
+const addToWatchlistText = '+ WATCHLIST'
+const removeFromWatchlistText = 'X'

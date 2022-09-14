@@ -1,0 +1,35 @@
+/* Getting top rated, and poster images */
+fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=<<apikey>>&language=en-US&page=1")
+    .then(res => res.json())
+    .then(data => {
+        // console.log(data)
+        data.results.map(movie =>{
+            // console.log(movie.original_title)
+            console.log(`https://www.themoviedb.org/movie/${movie.id}${movie.poster_path}`)
+            document.body.innerHTML += `
+                <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}" />
+            `
+        })
+    })
+
+
+
+/* Search for a movie by name */
+fetch("https://api.themoviedb.org/3/search/movie?api_key=<<apikey>>&language=en-US&page=1&include_adult=true&query=harry")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.results)
+        data.results.map(movie => {
+            console.log(movie.original_title)
+            document.body.innerHTML += `
+                    <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}" />
+                `
+        })
+    })
+    
+    ### movie.overview: The movie's description
+    ### movie.title: The movie's title
+    ### movie.vote_average: The movie's rating
+    
+    
+     

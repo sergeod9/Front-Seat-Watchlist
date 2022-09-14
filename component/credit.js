@@ -1,4 +1,6 @@
-<div id="credit-container">
+function getCreditHtml(){
+    return `
+        <div id="credit-container">
             <h2 class="credit-title">Front Seat Watchlist:</h2>
             <p class="credit-text within-paragraph">
                 Hello, my name is Georges Dahdouh, I made Front Seat app as a solo project in the 
@@ -26,3 +28,7 @@
             <p class="credit-text within-paragraph">And finally, this app wouldn't have been possible to make without the generous 
             free plan provided by: <a href="https://www.themoviedb.org/">themoviedb.org</a>, themoviedb.org provides all the data about the movies presented in Front Seat.</p>
         </div>
+    `
+}
+
+export default getCreditHtml
