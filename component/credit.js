@@ -15,7 +15,7 @@ function getCreditHtml(){
             </p>
             <h2 class="credit-title">Development</h2>
             <p class="credit-text within-paragraph">
-                Front Seat is develped using:
+                Front Seat is developed using:
             </p>
             <ul>
                 <li>HTML 5</li>

@@ -4,13 +4,11 @@
     * add cursor pointer to search //*** DONE ***
     * read more / add to watchlist //*** DONE ***
     * default top rated //*** DONE ***
+    * Add new releases, top rated ... buttons in header //*** DONE ***
+    * index.js line 56, refactor//*** DONE ***
     
     * Refactor //*** Partly done ...
-    
     * Work on style //*** Partly done ...
-    
-    * Add new releases, top rated ... buttons in header
-    * index.js line 56, refactor
-    
-    
     * =BUG= Entering number in input field for page isn't working in now-playing, but working in search // *** FIXED *** the problem was having the pagination input in a form, the e.preventDefault wasn't working in now-playing view, but working in the search view
+
+    * Report amount of movies in watchlist view
