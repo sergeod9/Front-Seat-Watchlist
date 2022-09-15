@@ -9,7 +9,7 @@ import {
     from './watchlist.js'
 
 function readMore(movieId){
-    let currentViewState = setViewState('read-more-movie')
+    setViewState('read-more-movie')
     fetch(`${baseUrl}/movie/${movieId}?api_key=${apiKey}&language=en-US`)
         .then(res => res.json())
         .then(movie => {
@@ -67,7 +67,6 @@ function renderReadMoreMovie(movie, actors){
                 <div>
                     <h2 class="movie-read-more-title">${movie.title}</h2>
                     <h3>${movie.tagline} </h3>
-                     ${watchListBtns}
                     <p>Genres: <span>• ${movieGenres.join(" • ")}</span></p>
                     <p>Realease Date: <span>${movieReleaseDate}</span></p> 
                     <p>Rating: <span>${movieRating}</span></p>
@@ -75,6 +74,7 @@ function renderReadMoreMovie(movie, actors){
                     <p>Original Languages: <span>• ${movieLanguages.join(" • ")}</p>
                     <p>Production: <span>• ${productionCompanies.join(" • ")}</span>
                     <p>Overview: <span>${movie.overview}</span></p>
+                    ${watchListBtns}
                 </div>
                 <img src="${PosterFullPath}" />
             </div> 

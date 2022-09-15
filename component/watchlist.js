@@ -3,18 +3,20 @@ import {renderSearchResults} from './render.js'
 import {readMore, renderReadMoreMovie} from './readmore.js'
 
 
-let viewState = getViewState()
 
 let watchlist = JSON.parse(localStorage.getItem('watchlist'))
 
 function getWatchBtns(movieId){
-    // watchlist = JSON.parse(localStorage.getItem('watchlist'))
+    let watchBtnClass = 'movie-btn-watchlist'
+    if (getViewState() === "read-more-movie") {
+        watchBtnClass = 'movie-btn-watchlist btn-read-more-view'
+    }
     getWatchlist()
     const watchBtnStatus = watchlist && watchlist.includes(String(movieId)) ? 'hide' : ''
     const removeBtnStatus = !watchlist || !watchlist.includes(String(movieId)) ? 'hide' : ''
     const watchBtnHtml = `
         <p 
-            class= "movie-btn-watchlist btn-transition ${watchBtnStatus}" 
+            class= "${watchBtnClass} btn-transition ${watchBtnStatus}" 
             data-movieid= "${movieId}"
             data-state="add"
             >${addToWatchlistText}
@@ -22,7 +24,7 @@ function getWatchBtns(movieId){
         `
     const removeBtnHtml = `
         <p
-            class= "movie-btn-watchlist btn-transition ${removeBtnStatus}" 
+            class= " ${watchBtnClass} btn-transition ${removeBtnStatus}" 
             data-movieid= "${movieId}"
             data-state="remove"
             >${removeFromWatchlistText}

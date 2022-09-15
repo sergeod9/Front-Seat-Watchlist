@@ -499,12 +499,23 @@ input.btn-transition{
     }
     p.movie-btn-watchlist{
         font-size: .9rem;
-        margin:0 !important;
+        margin:0;
         position: absolute;
         right: 15px;
-        bottom: 50px;
+        bottom: 35px;
         border: none;
 
+    }
+    /* The add to watchlist button in read-more-view*/
+    p.movie-btn-watchlist.btn-read-more-view{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        bottom:auto;
+        border: 2px solid yellow;
+        left: 0;
+        background-color: #223;
     }
     .read-more{
         font-size: 1rem;
@@ -513,10 +524,27 @@ input.btn-transition{
         bottom: 10px;
         margin-bottom: 40px;
     }
+    .movie-read-more-header img{
+        margin-top: -50px;
+    }
     .movie-poster{
         border-radius: 5px;;
     }
     #credit-container{
         width: 80vw;
+    }
+    #actors-container{
+        margin-top: -40px;
+        width: 90%;
+    }
+    #actors-container h3{
+        font-size: .9rem;
+    }
+    #actors-container p{
+        font-size: .7rem;
+    }
+    #actors-container img{
+        width: 120px;
+        height: calc(120px *7 /5)
     }
 }
